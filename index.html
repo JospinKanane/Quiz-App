@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App Quiz</title>
+</head>
+<body>
+        <section  class="container">
+            <h1>JavaScript Quiz</h1>
+            <div class = "text">
+                Évaluez vos connaissances en JavaScript en repondant aux questions que nous avons spécialement sélectionées pour vous.<br> C'est fun et c'est gratuit. 
+            </div>
+            <form id ="start" action="main.html">
+                <label for="nom">Nom</label>
+                <input type="text" id ="nom" name ="name" placeholder="Votre nom">
+                <label for="email">Mail</label>
+                <input type="email" id="email" name="email" placeholder="Votre mail">
+                <span id="error"></span>
+                <span id="button">
+                    <button type="submit" id="btnSubmit">Commencer</button>
+                </span>
+            </form>    
+        </section>
+
+        <!-- Seconde section-->
+        <section class="questionPage">
+            <p>Quel est le type de fichier JavaScript ?</p>
+            <div class="progressMarks">
+                <label for="progress">Question 
+                    <span id="questionId">
+                    1
+                    </span>
+                    /15</label>
+                <label for="timeCounter" id="timer">60</label>
+            </div>
+            <div id="progresStatus">
+                <div id="myProgressBar"></div>
+            </div>
+            <form class="respContainer">
+                <label for="a"   class="response">
+                    <input type="radio" id="a" name="radio" class="answer">
+                    <span id="a_text">.ts</span>
+                </input>
+                </label>
+                
+                <label for="b" class="response">
+                    <input type="radio" id="b" name="radio" class="answer">
+                        <span id="b_text">.jsx</span>
+                    </input>
+                </label>
+                <label for="c" class="response">
+                    <input type="radio" id="c" name="radio" class="answer">
+                        <span id="c_text">.js</span>
+                    </input>
+                </label>
+                <label for="d" class="response">
+                    <input type="radio" id="d" name="radio" class="answer">
+                        <span id="d_text">.j</span>
+                    </input>
+                </label>
+            </form>
+            <div class="btn">
+                <button class ="quitBtn">Quitter</button>
+                <button class ="nextBtn">Suivant</button>
+            </div>
+        </section>
+        <!-- Section de rendu -->
+        <section class="finalContainer" id="marks">
+            <div class="userName">User Name</div>
+            <div class="userMail">User Mail</div>
+            <img src="images/check-success.png" alt="montre si on a reussi le quiz ou pas">
+            <div class="marksNumber"><span id ="score">1</span>/15</div>
+            <button class="accueil">Accueil</button>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
